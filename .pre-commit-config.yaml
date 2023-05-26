@@ -2,6 +2,11 @@
 # to enable run `pip install pre-commit && pre-commit install`
 
 repos:
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: isort (python)
   - repo: local
     hooks:
       - id: yapf
@@ -11,7 +16,7 @@ repos:
         args: [-i, -vv]
         types: [python]
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v4.4.0
     hooks:
       - id: trailing-whitespace
       - id: check-docstring-first
